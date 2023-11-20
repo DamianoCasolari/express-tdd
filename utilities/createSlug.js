@@ -1,5 +1,5 @@
 module.exports = function (text) {
-    const users = require("../db/posts.json")
+    const users = require("../db_test/posts.json")
 
     // should throw an error in case of missing or invalid title 
     if(!text || typeof text != "string"){
@@ -21,8 +21,6 @@ module.exports = function (text) {
         let maxIndex = Math.max(...arrayIndexes)
         kebabString = kebabString + "-" + (maxIndex + 1)
     }
-
-
 
     return kebabString
 }

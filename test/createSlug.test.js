@@ -36,7 +36,7 @@ test("dovrebbe lanciare un errore in caso di titolo non presente o formato errat
 })
 
 test("dovrebbe lanciare un errore se manca l’array dei post", () => {
-    const posts = require("../db/emptyPosts.json")
+    const posts = require("../db_test/emptyPosts.json")
 
     const testFunction = () => {
         if (!Array.isArray(posts) || posts.length <= 1) {
@@ -45,3 +45,4 @@ test("dovrebbe lanciare un errore se manca l’array dei post", () => {
     };
     expect(testFunction).toThrowError("posts is missing or not an array")
 })
+
