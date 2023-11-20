@@ -6,7 +6,7 @@ module.exports = class Model {
         if (!filePath) {
             throw new Error("The path of the file is required")
         }
-        this.filePath = path.resolve(__dirname, "..", "db_test", filePath);
+        this.filePath =  filePath;
 
     }
     read() {

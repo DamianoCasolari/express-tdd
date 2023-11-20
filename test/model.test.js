@@ -40,10 +40,10 @@ expect(isArray).toThrowError("The file is not an array")
 
 test("add dovrebbe aggiungere un elemento all’array dei dati e ritornare tutta la lista", () => {
     const instanceOfModel = new Model("../db_test/fakeFile.json");
-    // const initialArray = instanceOfModel.read();
-    // const newArrayList = instanceOfModel.add("marco",42); 
+    const initialArray = instanceOfModel.read();
+    const newArrayList = instanceOfModel.add("marco",42); 
 
-    // expect(Array.isArray(newArrayList)).toBe(true); 
-    // expect(newArrayList).toContainEqual({ name: "marco", age: 42 }); 
-    // expect(newArrayList).toHaveLength(initialArray.length + 1);
+    expect(Array.isArray(newArrayList)).toBe(true); 
+    expect(newArrayList).toContainEqual({ name: "marco", age: 42 }); 
+    expect(newArrayList).toHaveLength(initialArray.length + 1);
 })
